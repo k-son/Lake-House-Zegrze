@@ -226,6 +226,7 @@
       margin: 1.6rem auto;
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
 
       &__button {
@@ -234,6 +235,7 @@
     
         &:not(:last-of-type) {
           margin-right: 2.5rem;
+          margin-bottom: 2rem;
         }
     
         &__link {
@@ -324,6 +326,144 @@
           }
         }
       } 
+    }
+  }
+}
+
+/// GALLERY
+.gallery {
+  background-color: var(--color-bg-white);
+  @include margin-top;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+      display: inline-block;
+      width: 33.3333333%;
+    }
+  }
+
+  &__title,
+  &__arrows {
+    padding: 3.7rem 0;
+    text-align: center;
+  }
+
+  &__arrows--left {
+    margin-right: 4rem;
+  }
+}
+
+
+/// APARTMENTS
+.apartments {
+  background-color: var(--color-bg-white);
+  @include margin-top;
+  padding: 5rem;
+  min-height: 93rem;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+    &__text {
+      width: 30%;
+      align-self: center;
+      padding-right: 5rem;
+
+      &__title {
+        margin-bottom: 5rem;
+      }
+
+      &__para {
+        font-family: 'Alegreya', serif;
+        font-size: 1.4rem;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+
+    &__variants {
+      width: 20%;
+      background-color: var(--color-bg-dark);
+      padding: 5rem;
+
+      &__variant {
+        color: var(--color-text-white);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #444;
+        }
+
+        &__caption {
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          line-height: 1rem;
+        }
+
+        &__measure {
+          font-family: 'Alegreya', serif;
+          font-size: 2.4rem;
+          line-height: 2rem;
+
+        }
+      }
+    }
+
+    &__plan {
+      width: 50%;
+      background-color: var(--color-bg-grey);
+      display: flex;
+      flex-direction: column;
+
+
+      &__lokal  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+
+        &__para {
+
+          &:not(:last-of-type) {
+            margin-right: 5rem;
+          }
+        }
+
+        &__span--1 {
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          font-weight: 400;
+          margin-right: 1rem;
+        }
+
+        &__span--2 {
+          font-family: 'Alegreya', serif;
+          font-size: 3rem;
+        }
+      }
+
+      &__scheme {
+        display: flex;
+        justify-content: center;
+
+        &__image {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
