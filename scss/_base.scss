@@ -1,0 +1,39 @@
+:root {
+  --color-bg-dark: #0b0923;
+  --color-bg-white: #ffffff;
+  --color-bg-grey: #ebebeb;
+}
+
+$bp-900: 56.25em; //900px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*::selection {
+
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg-dark);
+  min-height: 100vh;
+}
+
+h1 {
+  color: red;
+}
