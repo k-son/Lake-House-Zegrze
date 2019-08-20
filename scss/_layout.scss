@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  height: 10rem;
+  width: calc(100% - 10rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-white);
+  padding: 1rem 0;
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: 'Alegreya', serif;
+    font-size: 2.4rem;
+
+    &__item {
+
+      &:not(:last-of-type) {
+        margin-right: 5rem;
+      }
+    }
+
+    &__icon {
+      padding-right: 1rem;
+    }
+
+    &__description {
+      border-left: 1px solid var(--color-bg-grey);
+      padding-left: 1rem;
+      display: inline-block;
+
+      & a {
+        @include link-reset;
+      }
+    }
+  }
+}
+
+.nav {
+  margin-right: 3rem;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item {
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 1.3rem;
+  }
+}

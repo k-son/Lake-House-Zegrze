@@ -2,6 +2,9 @@
   --color-bg-dark: #0b0923;
   --color-bg-white: #ffffff;
   --color-bg-grey: #ebebeb;
+
+  --color-text-dark: #141b2d;
+  --color-text-white: #fff;
 }
 
 $bp-900: 56.25em; //900px
@@ -31,9 +34,10 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-bg-dark);
+  max-width: 192rem;
   min-height: 100vh;
-}
-
-h1 {
-  color: red;
+  margin: 0 auto;
+  padding: 0 5rem;
+  color: var(--color-text-white);
+  border: 1px solid red;
 }
