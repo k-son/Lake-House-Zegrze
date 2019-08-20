@@ -1,4 +1,5 @@
-.header {
+///// NAVBAR
+.navbar {
   position: fixed;
   top: 0;
   height: 10rem;
@@ -9,7 +10,9 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-text-white);
+  background-color: var(--color-bg-dark);
   padding: 1rem 0;
+  z-index: 99;
 
   &__contact {
     display: flex;
@@ -67,5 +70,71 @@
     text-transform: uppercase;
     color: inherit;
     font-size: 1.3rem;
+  }
+}
+
+///// LOGO
+.logo {
+  width: 18rem;
+  height: 22.2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg-dark);
+  z-index: 999;
+  
+  &__image {
+    position: relative;
+    @include center;
+  }
+}
+
+
+///// MAIN PART
+/// Header
+.header {
+  width: 100%;
+  margin-top: 10rem;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__content {
+    position: absolute;
+    @include center;
+    z-index: 10;
+    color: var(--color-text-whitish);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  &__slogan {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-top: 1rem;
+    width: 70rem;
+  }
+
+  &__button {
+    @include button;
+    margin-top: 4rem;
+
+    &__link {
+      @include button-link;
+
+      &__icon {
+        @include button-link-icon;
+      }
+    }
   }
 }

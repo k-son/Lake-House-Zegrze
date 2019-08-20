@@ -2,3 +2,30 @@
   text-decoration: none;
   color: inherit;
 }
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin button {
+  width: 248px;
+  height: 61px;
+  background-color: var(--color-bg-dark);
+  border: none;
+  border-radius: 2px;
+}
+
+@mixin button-link {
+  @include link-reset;
+  color: var(--color-text-whitish);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: -0.039rem;
+}
+
+@mixin button-link-icon {
+  margin-left: 1rem;
+  vertical-align: middle;
+}
