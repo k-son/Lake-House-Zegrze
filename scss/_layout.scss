@@ -138,3 +138,192 @@
     }
   }
 }
+
+
+/// LOKALIZACJA
+.localization {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--color-bg-white);
+  @include margin-top;
+  @include padding-50;
+
+  &__content {
+    width: 50%;
+    min-height: 93rem;
+    background-color: var(--color-bg-grey);
+    padding: 0 5rem;
+
+    &__text {
+      margin-top: 10rem;
+
+      &__title {
+      }
+
+      &__slogan {
+        
+      }
+
+      &__para {
+        font-family: 'Alegreya', serif;
+        font-size: 1.4rem;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+
+    &__icons {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-items: center;
+      align-items: center;
+
+      &__item {
+        @include localization-icons;
+        align-self: end;
+        margin-top: 3.2rem;
+
+        &__icon {
+          display: inline-block;
+        }
+
+        &__text--upper {
+          font-size: 3rem;
+          line-height: 2.6rem;
+        }
+
+        &__text--lower {
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 4rem auto;
+
+      &__item {
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        background-color: #000;
+        opacity: .2;
+        margin: auto .6rem;
+
+        &:first-of-type {
+          opacity: 1;
+        }
+      }
+    }
+  
+    &__buttons {
+      margin: 1.6rem auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &__button {
+        @include button;
+        //margin-top: 4rem;
+    
+        &:not(:last-of-type) {
+          margin-right: 2.5rem;
+        }
+    
+        &__link {
+          @include button-link;
+    
+          &__icon {
+            @include button-link-icon;
+          }
+        }
+      } 
+    }
+  }   
+
+  &__picture {
+    width: 50%;
+    background-image: url(../images/lodka.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+
+/// INVESTMENT
+.investment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--color-bg-white);
+  @include margin-top;
+  @include padding-50;
+
+  &__picture {
+    width: 50%;
+    background-image: url(../images/investycja.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content {
+    width: 50%;
+    min-height: 93rem;
+    background-color: var(--color-bg-grey);
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__text {
+
+      &__title {
+      }
+
+      &__slogan {
+        
+      }
+
+      &__para {
+        font-family: 'Alegreya', serif;
+        font-size: 1.4rem;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+      
+    &__buttons {
+      margin: 1.6rem auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &__button {
+        @include button;
+        margin-top: 4rem;
+    
+        &:not(:last-of-type) {
+          margin-right: 2.5rem;
+        }
+    
+        &__link {
+          @include button-link;
+    
+          &__icon {
+            @include button-link-icon;
+          }
+        }
+      } 
+    }
+  }
+}

@@ -1,3 +1,5 @@
+///// MIXINS
+
 @mixin link-reset {
   text-decoration: none;
   color: inherit;
@@ -9,9 +11,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin margin-top {
+  margin-top: 5em;
+}
+
+@mixin padding-50 {
+  padding: 5rem;
+}
+
 @mixin button {
-  width: 248px;
-  height: 61px;
+  width: 24.8rem;
+  height: 6.1rem;
   background-color: var(--color-bg-dark);
   border: none;
   border-radius: 2px;
@@ -23,9 +33,40 @@
   text-transform: uppercase;
   font-size: 1.3rem;
   letter-spacing: -0.039rem;
+  line-height: 6.1rem;
+  display: inline-block;
+  height: 100%;
+  padding: 0 0 0 3rem;
 }
 
 @mixin button-link-icon {
   margin-left: 1rem;
   vertical-align: middle;
+  padding: 0 3rem 0 0;
+}
+
+@mixin localization-icons {
+  text-align: center;
+  color: var(--color-localization-icons);
+  font-family: 'Alegreya', serif;
+}
+
+
+
+///// Classes
+
+.title {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--color-bg-dark);
+  text-transform: uppercase;
+}
+
+.slogan {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+  color: var(--color-text-slogan);
+  text-transform: uppercase;
 }
