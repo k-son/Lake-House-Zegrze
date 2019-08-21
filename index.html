@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- NAVIGATION -->
   <div class="navbar">
+    <img src="images/hamburger.png" alt="menu" class="nav__hamburger" id="hamburgerIcon">
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">lokalizacja</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">o&nbspinwestycji</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">galeria</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">mieszkania</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">kontakt</a></li>
+        <li class="nav__item"><a href="#lokalizacja" class="nav__link">lokalizacja</a></li>
+        <li class="nav__item"><a href="#inwestycja" class="nav__link">o&nbsp;inwestycji</a></li>
+        <li class="nav__item"><a href="#galeria" class="nav__link">galeria</a></li>
+        <li class="nav__item"><a href="#mieszkania" class="nav__link">mieszkania</a></li>
+        <li class="nav__item"><a href="#kontakt" class="nav__link">kontakt</a></li>
       </ul>
     </nav>
     <div class="navbar__contact">
@@ -32,12 +34,29 @@
       </div>
     </div>
   </div>
+  <!-- hamburger menu -->
+    <nav class="hamburger">
+      <div class="hamburger__close">
+        <p class="hamburger__close__icon" id="closeIcon">x</p>
+      </div>
+      <ul class="hamburger__list">
+        <li class="nav__item hamburger__item"><a href="#lokalizacja" class="nav__link hamburger__link">lokalizacja</a></li>
+        <li class="nav__item hamburger__item"><a href="#inwestycja" class="nav__link hamburger__link">o&nbsp;inwestycji</a></li>
+        <li class="nav__item hamburger__item"><a href="#galeria" class="nav__link hamburger__link">galeria</a></li>
+        <li class="nav__item hamburger__item"><a href="#mieszkania" class="nav__link hamburger__link">mieszkania</a></li>
+        <li class="nav__item hamburger__item"><a href="#kontakt" class="nav__link hamburger__link">kontakt</a></li>
+      </ul>
+    </nav>
+
+  <!-- RANDOME -->
   <div class="logo">
     <img src="images/logo.svg" alt="logo" class="logo__image">
   </div>
   <div class="waves">
     <img src="images/fale.png" alt="grafika fale">
   </div>
+
+  <!-- MAIN -->
   <main>
     <div class="header">
       <img src="images/header_pic.jpg" alt="Widok całego osiedla" class="header__image">
@@ -47,7 +66,8 @@
         <button class="header__button">niesamowita okolica <img src="images/arrow-right.png" alt="strzałka w prawo" class="header__button__link__icon"></button>
       </div>
     </div>
-    <div class="localization">
+
+    <div class="localization" id="lokalizacja">
       <div class="localization__content">
         <div class="localization__content__text">
           <p class="localization__content__text__title title">lokalizacja</p>
@@ -109,7 +129,8 @@
       </div>
       <div class="localization__picture"></div>
     </div>
-    <div class="investment">
+
+    <div class="investment" id="inwestycja">
       <div class="investment__picture"></div>
       <div class="investment__content">
         <div class="investment__content__text">
@@ -125,7 +146,8 @@
         </div>
       </div>
     </div>
-    <div class="gallery">
+
+    <div class="gallery" id="galeria">
       <div class="gallery__title title">przyjrzyj się bliżej projektowi</div>
       <div class="gallery__images">
         <img src="images/galeria_1.jpg" alt="budynek mieszkalny" class="gallery__images__image">
@@ -137,7 +159,8 @@
         <img src="images/arrow-black-right.png" alt="strzałka w prawo" class="gallery__arrows--right">
       </div>
     </div>
-    <div class="apartments">
+
+    <div class="apartments" id="mieszkania">
       <div class="apartments__content">
         <div class="apartments__content__text">
           <p class="apartments__content__text__title title">WYBIERZ APARTAMENT DLA SIEBIE</p>
@@ -277,7 +300,8 @@
         </div>
       </div>
     </div>
-    <div class="contact">
+
+    <div class="contact" id="kontakt">
       <div class="contact__content">
         <div class="contact__content__map"></div>
         <div class="contact__content__text">
@@ -312,6 +336,8 @@
       </div>
     </div>
   </main>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__box--left">
       <a href="https://www.bdc-development.pl/" target="_blank" class="footer__linkLogo">

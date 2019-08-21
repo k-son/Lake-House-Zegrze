@@ -10,7 +10,6 @@
   --color-localization-icons: #808285;
 }
 
-$bp-900: 56.25em; //900px
 
 * {
   margin: 0;
@@ -32,6 +31,13 @@ html {
   font-size: 62.5%;
   line-height: 1.8;
   scroll-behavior: smooth;
+
+  @media screen and (max-width: 900px) {
+    font-size: 56.25%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 50%;
+  }
 }
 
 body {
