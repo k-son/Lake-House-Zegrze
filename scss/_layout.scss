@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-text-white);
+  color: #efefef;
   background-color: var(--color-bg-dark);
   padding: 1rem 0;
   z-index: 99;
@@ -71,6 +71,7 @@
     text-transform: uppercase;
     color: inherit;
     font-size: 1.3rem;
+    letter-spacing: .5px;
   }
 }
 
@@ -83,7 +84,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-bg-dark);
-  z-index: 999;
+  z-index: 2;
   
   &__image {
     position: relative;
@@ -91,6 +92,13 @@
   }
 }
 
+///// WAVES grafika
+.waves {
+  position: absolute;
+  left: -20rem;
+  top: 67rem;
+  z-index: 2;
+}
 
 ///// MAIN PART
 /// Header
@@ -128,11 +136,11 @@
 
   &__button {
     @include button;
-    margin-top: 4rem;
+    margin: 4rem auto 0 auto;
 
-      &__link__icon {
-        @include button-link-icon;
-      }
+    &__link__icon {
+      @include button-link-icon;
+    }
     
   }
 }
@@ -518,6 +526,7 @@
           font-size: 3rem;
           color: var(--color-bg-dark);
           float: right;
+          transform: translateY(-.7rem);
         }
       }
 
@@ -535,6 +544,137 @@
           }
         }
       }
+    }
+  }
+}
+
+/// CONTACT
+.contact {
+  background-color: var(--color-bg-white);
+  @include margin-top;
+  padding: 5rem;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__map {
+      width: 50%;
+      background-image: url(../images/mapa.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__text {
+      width: 50%;
+      padding: 5rem;
+
+      &__caption {
+        font-family: 'Alegreya', serif;
+        font-size: 3rem;
+        line-height: 3rem;
+        color: var(--color-bg-dark);
+      }
+
+      &__form {
+        margin-top: 5rem;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__label {
+          text-transform: uppercase;
+          font-size: 1rem;
+          letter-spacing: .5px;
+          font-weight: 400;
+          color: #666;
+          margin-bottom: .5rem;
+        }
+
+        &__input {
+          font-family: 'Merriweather', serif;
+          font-size: 1.6rem;
+          margin-bottom: 1.6rem;
+          border: none;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: .5em;
+        }
+
+        &__agreement {
+
+          &__para {
+            font-family: 'Merriweather', serif;
+            font-size: 1rem;
+            margin-top: 1rem;
+
+            &__link {
+              color: var(--color-bg-dark);
+            }
+          }
+        }
+
+        &__button {
+          @include button;
+          width: 16rem;
+          margin-top: 3.2rem;
+
+          &__arrow {
+            @include button-link-icon;
+          }
+        }
+      }
+    }
+  }
+}
+
+///// FOOTER
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include margin-top;
+  height: 15rem;
+
+  &__box--left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box--right {
+
+  }
+
+  &__linkLogo {
+    margin-right: 4rem;
+  }
+
+  &__copyright {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    color: #aaa;
+    letter-spacing: .6px;
+  }
+
+  &__author {
+
+    &__created {
+      font-family: 'Merriweather', serif;
+      font-size: 1.2rem;
+      color: #aaa;
+      letter-spacing: .6px;
+      margin-right: 1rem;
+    }
+
+    &__skot {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--color-text-whitish);
     }
   }
 }
