@@ -82,6 +82,10 @@
 .nav {
   margin-right: 3rem;
 
+  @media screen and (max-width: 1111px) {
+    max-width: 33%;
+  }
+
   @media screen and (max-width: 900px) {
     display: none;
   }
@@ -122,6 +126,10 @@
   @media screen and (max-width: 900px) {
     display: block;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 //modal
@@ -133,8 +141,6 @@
   z-index: 9999;
   top: 10rem;
   left: 0;
-  
-  // usun
   display: none;
 
   @media screen and (min-width: 900px) {
@@ -171,6 +177,10 @@
     position: relative;
     padding: 3rem 6rem;
     display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
