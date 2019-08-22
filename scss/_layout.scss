@@ -755,6 +755,18 @@
 
         }
       }
+
+      .variantBtn {
+
+        &:hover {
+          cursor: pointer;
+          color: #888;
+        }
+      }
+
+      .variantSelected {
+        color: #888;
+      }
     }
 
     &__plan {
@@ -776,11 +788,16 @@
       }
 
       &__scheme {
-        display: block;
+        display: none;
         width: 100%;
         max-width: 750px;
         height: auto;
         margin: 0 auto;
+      }
+
+      // to show apartments schemes in Apartments > plan
+      .showScheme {
+        display: block;
       }
 /*
       &__lokal  {
