@@ -775,6 +775,14 @@
         grid-row: 3 / 4;
       }
 
+      &__scheme {
+        display: block;
+        width: 100%;
+        max-width: 750px;
+        height: auto;
+        margin: 0 auto;
+      }
+/*
       &__lokal  {
         display: flex;
         flex-direction: row;
@@ -937,7 +945,7 @@
           }
         }
       }
-
+*/
       &__buttons {
         display: flex;
         flex-direction: row;

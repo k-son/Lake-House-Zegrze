@@ -17,11 +17,13 @@ function closeModalMenu() {
 
 closeIcon.addEventListener('click', closeModalMenu);
 
+function modalMenuLinksAction() {
 let i = 0;
 while (i < modalMenuLinks.length) {
   modalMenuLinks[i].addEventListener('click', closeModalMenu);
   i++;
-}
+}}
+modalMenuLinksAction();
 
 
 
