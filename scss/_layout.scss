@@ -114,6 +114,13 @@
     color: inherit;
     font-size: 1.3rem;
     letter-spacing: .5px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: all .2s;
+
+    &:hover {
+      border-bottom: 2px solid var(--color-blue-effect);
+    }
   }
 }
 
@@ -121,7 +128,11 @@
 //icon
 .nav__hamburger {
   height: 5rem;
+  padding: 0 .7rem;
+  border-radius: 2px;
+  transform: translateX(-1rem);
   display: none;
+  transition: all .2s;
 
   @media screen and (max-width: 900px) {
     display: block;
@@ -129,18 +140,20 @@
 
   &:hover {
     cursor: pointer;
+    background-color: var(--color-blue-effect);
   }
 }
 
 //modal
 .hamburger {
   position: fixed;
+  top: 10rem;
+  left: 0;
+  z-index: 9999;
   background-color: rgba(11, 9, 35, .9);
   color: var(--color-text-whitish);
   padding: 1rem 4rem 4rem 5rem;
-  z-index: 9999;
-  top: 10rem;
-  left: 0;
+  border-bottom-right-radius: 3px;
   display: none;
 
   @media screen and (min-width: 900px) {
@@ -171,15 +184,19 @@
   }
 
   &__close {
-    font-size: 4rem;
+    position: relative;
+    font-size: 3.5rem;
     text-transform: uppercase;
     color: var(--color-text-whitish);
-    position: relative;
-    padding: 3rem 6rem;
+    padding: 2rem 4rem;
+    border-radius: 2px;
     display: inline-block;
-
+    transform: translateX(3rem);
+    transition: all .2s;
+    
     &:hover {
       cursor: pointer;
+      background-color: var(--color-blue-effect);
     }
   }
 }
@@ -760,12 +777,12 @@
 
         &:hover {
           cursor: pointer;
-          color: #888;
+          color: var(--color-blue-effect);
         }
       }
 
       .variantSelected {
-        color: #888;
+        color: var(--color-blue-effect);
       }
     }
 

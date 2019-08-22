@@ -41,6 +41,12 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  border: 2px solid var(--color-bg-dark);
+  transition: all .2s;
+
+  &:hover {
+    background-color: var(--color-button-transition);
+  }
 }
 
 @mixin button-not-last {
