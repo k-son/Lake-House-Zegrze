@@ -17,6 +17,9 @@
 
   @media screen and (max-width: 650px) {
     height: 15rem;
+  }
+
+  @media screen and (max-width: 600px) {
     width: calc(100% - 4rem);
   }
 
@@ -1132,7 +1135,7 @@
 
   &__box--left {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     @media screen and (max-width: 600px) {
       justify-content: space-between;
@@ -1145,6 +1148,7 @@
 
   &__linkLogo {
     margin-right: 4rem;
+    transform: translateY(-1.2rem);
   }
 
   &__copyright {
