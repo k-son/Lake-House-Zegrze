@@ -54,3 +54,31 @@ for (let i = 0; i < variantButtons.length; i++) {
     window.location = '#' + 'plans';
   }});
 }
+
+
+///// ANCHOR FUNCTIONS FOR BUTTONS
+
+document.getElementById('niesamowitaOkolica').addEventListener('click', () => {
+  window.location = '#' + 'lokalizacja';
+})
+
+document.getElementById('poznajInwestycje').addEventListener('click', () => {
+  window.location = '#' + 'inwestycja';
+})
+
+document.getElementById('przyjrzyjSie').addEventListener('click', () => {
+  window.location = '#' + 'galeria';
+})
+
+document.getElementById('przyjrzyjSie2').addEventListener('click', () => {
+  window.location = '#' + 'galeria';
+})
+
+document.getElementById('wybierzMieszkanie').addEventListener('click', () => {
+  window.location = '#' + 'mieszkania';
+})
+
+document.getElementById('rezerwujApartament').addEventListener('click', () => {
+  window.location = '#' + 'kontakt';
+})
+

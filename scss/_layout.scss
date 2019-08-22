@@ -976,7 +976,7 @@
         &__button {
           @include button;
 
-          &:not(:last-of-type) {
+          &:first-child {
             @include button-not-last;
           }
         }
@@ -984,6 +984,7 @@
     }
   }
 }
+
 
 /// CONTACT
 .contact {
