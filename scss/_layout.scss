@@ -188,7 +188,7 @@
 
   &__close {
     position: relative;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: var(--color-text-whitish);
     padding: 2rem 4rem;
@@ -632,6 +632,7 @@
     &__image {
       display: inline-block;
       width: 33.3333333%;
+      align-self: center;
     }
   }
 
@@ -643,6 +644,10 @@
     @media screen and (max-width: 600px) {
       padding: 2rem 0;
     }
+  }
+
+  &__arrows {
+    visibility: hidden;
   }
 
   &__arrows--left {

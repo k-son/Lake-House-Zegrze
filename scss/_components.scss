@@ -108,4 +108,26 @@ button:hover {
   margin-bottom: 2rem;
 }
 
+.anchor {
+  display: inline-block;
+  visibility: hidden;
+  position: relative;
+  transform: translateY(-9rem);
+}
 
+#upBtn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 6rem;
+  height: auto;
+  border-radius: 3px;
+  z-index: 9999;
+  transition: all .2s;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}

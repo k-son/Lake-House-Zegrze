@@ -82,3 +82,23 @@ document.getElementById('rezerwujApartament').addEventListener('click', () => {
   window.location = '#' + 'kontakt';
 })
 
+
+
+///// SCROLL TO TOP BUTTON
+
+const upBtn = document.getElementById('upBtn');
+
+window.onscroll = function() {showUpBtn()};
+
+function showUpBtn() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    upBtn.style.display = "block";
+  } else {
+    upBtn.style.display = "none";
+  }
+}
+upBtn.addEventListener('click', () => {
+  document.body.scrollTop = 0;  // For Sarafi
+  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+  closeModalMenu();
+})
