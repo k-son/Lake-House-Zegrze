@@ -629,24 +629,37 @@
   &__images {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
 
     @media screen and (max-width: 600px) {
-      flex-direction: column;
+      //flex-direction: column;
     }
 
     &__image {
       display: inline-block;
-      width: 33.3333333%;
-      align-self: center;
+      height: 50rem;
+      max-height: 60vh;
+      width: auto;
+      //width: 33.3333333%;
+      //align-self: center;
+
+      @media screen and (max-width: 900px) {
+        width: 85%;
+        max-width: 749px;
+        height: auto;
+      }
 
       @media screen and (max-width: 600px) {
-        width: 65%;
-        margin-top: 2.5rem;
+        //width: 65%;
+        //margin-top: 2.5rem;
+
       }
 
       @media screen and (max-width: 450px) {
-        width: 80%;
-        margin-top: 2rem;
+        //width: 80%;
+        //margin-top: 2rem;
       }
     }
   }
@@ -662,11 +675,22 @@
   }
 
   &__arrows {
-    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__para {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: .5px;
+    }
   }
 
-  &__arrows--left {
-    margin-right: 4rem;
+  &__arrows--left,
+  &__arrows__para {
+    margin-right: 2rem;
   }
 }
 
@@ -769,17 +793,23 @@
 
       &__variant {
         color: var(--color-text-white);
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
 
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #444;
+        }
+        
         @media screen and (max-width: 1100px) {
           border-bottom: 1px solid #444;
           text-align: center;
           margin: 1rem;
         }
 
-        &:not(:last-of-type) {
-          border-bottom: 1px solid #444;
+        &:last-of-type {
+          @media screen and (max-width: 500px) {
+            border-bottom: none;
+          }
         }
 
         &__caption {

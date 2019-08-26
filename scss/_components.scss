@@ -131,3 +131,9 @@ button:hover {
     transform: scale(1.2);
   }
 }
+
+.emptySpace {
+  height: 100%;
+  flex: 0 0 15%;
+  background-color: transparent;
+}
