@@ -257,6 +257,7 @@
   top: 67rem;
   z-index: 2;
   opacity: .8;
+  display: none;
 
   @media screen and (max-width: 1200px) {
     opacity: 0;
