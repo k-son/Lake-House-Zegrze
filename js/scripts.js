@@ -52,6 +52,18 @@ for (let i = 0; i < variantButtons.length; i++) {
     variantButtons[i].classList.add('variantSelected');
     if (window.matchMedia("(max-width: 1100px)").matches) {
     window.location = '#' + 'plans';
+    }
+  });
+
+  variantButtons[i].addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+    removeShowScheme();
+    schemes[i].classList.add('showScheme');
+    removeVariantSelected();
+    variantButtons[i].classList.add('variantSelected');
+    if (window.matchMedia("(max-width: 1100px)").matches) {
+    window.location = '#' + 'plans';
+    }
   }});
 }
 
