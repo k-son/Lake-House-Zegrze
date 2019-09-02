@@ -26,7 +26,8 @@
 }
 
 *::selection {
-
+  background-color: var(--color-blue-effect);
+  color: white;
 }
 
 html {

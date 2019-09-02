@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: row;
     font-family: 'Alegreya', serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     @media screen and (max-width: 1200px) {
       font-size: 2rem;
@@ -42,6 +42,7 @@
       margin-right: 0;
     }
 
+
     &__item {
 
       &:not(:last-of-type) {
@@ -54,6 +55,12 @@
         @media screen and (max-width: 650px) {
           margin: 1.5rem 0;
         }
+      }
+
+      &:nth-child(2):hover .navbar__contact__description {
+        cursor: pointer;
+        background-color: var(--color-blue-effect);
+        text-decoration: underline;
       }
     }
 
@@ -75,8 +82,14 @@
         border: none;
       }
 
-      & a {
+      &--mail a {
         @include link-reset;
+
+        &:focus {
+          outline: none;
+          background-color: var(--color-blue-effect);
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -121,8 +134,13 @@
     border-bottom: 1px solid transparent;
     transition: all .2s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom: 2px solid var(--color-blue-effect);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -829,20 +847,35 @@
 
         }
       }
+    }
 
       .variantBtn {
+        position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus {
           cursor: pointer;
           color: var(--color-blue-effect);
+        }
+
+        &:hover::before,
+        &:focus::before {
+          @include variantArrow;
+        }
+
+        &:focus {
+          outline: none;
         }
       }
 
       .variantSelected {
         color: var(--color-blue-effect);
+        
+        &::before {
+          @include variantArrow;
+        }
       }
-    }
-
+    
     &__plan {
       width: 50%;
       background-color: var(--color-bg-white);
@@ -1144,6 +1177,11 @@
           border: none;
           border-bottom: 1px solid #ddd;
           padding-bottom: .5em;
+
+          &:focus {
+            outline: 2px solid var(--color-blue-effect);
+            outline-offset: .5rem;
+          }
         }
 
         &__agreement {
@@ -1155,7 +1193,21 @@
 
             &__link {
               color: var(--color-bg-dark);
+
+              &:hover {
+                color: var(--color-blue-effect);
+              }
+
+              &:focus {
+                outline: 2px solid var(--color-blue-effect);
+                outline-offset: .5rem;
+              }
             }
+          }
+
+          &__checkbox {
+
+
           }
         }
 

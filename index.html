@@ -31,9 +31,9 @@
         <span class="navbar__contact__description">+48&nbsp513&nbsp616&nbsp616</span>
       </div>
       <div class="navbar__contact__item">
-        <img src="images/icon_mail.svg" alt="Mail icon" class="navbar__contact__icon">
-        <span class="navbar__contact__description"><a href="mailto:sprzedaz@lakehousezegrze.pl">sprzedaz@lakehousezegrze.pl</a></span>
-      </div>
+        <img src="images/icon_mail.svg" alt="Mail icon" class="navbar__contact__icon" tabindex="0">
+        <span class="navbar__contact__description navbar__contact__description--mail"><a href="mailto:sprzedaz@lakehousezegrze.pl">sprzedaz@lakehousezegrze.pl</a></span>
+      </div>  
     </div>
   </div>
   <!-- hamburger menu -->
@@ -48,16 +48,6 @@
       </ul>
     </nav>
 
-  <!-- RANDOME -->
-  <div class="logo">
-    <img src="images/logo.svg" alt="logo" class="logo__image">
-  </div>
-  <div class="waves">
-    <img src="images/fale.png" alt="grafika fale">
-  </div>
-  <svg id="upBtn"
-      viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M21.5,136.16667c0,7.91558 6.41775,14.33333 14.33333,14.33333h100.33333c7.91558,0 14.33333,-6.41775 14.33333,-14.33333v-100.33333c0,-7.91558 -6.41775,-14.33333 -14.33333,-14.33333h-100.33333c-7.91558,0 -14.33333,6.41775 -14.33333,14.33333z" fill="#00798f"></path><path d="M125.64242,96.69983l-11.05817,11.02592l-28.58425,-28.36208l-28.58067,28.36208l-11.05817,-11.02592l39.63883,-39.3665z" fill="#ffffff"></path></g></g>
-  </svg>
 
   <!-- MAIN -->
   <main>
@@ -357,7 +347,7 @@
             </div>
             <div class="contact__content__text__form__item">
               <label for="checkbox" class="contact__content__text__form__agreement">
-                <input type="checkbox" id="checkbox">
+                <input type="checkbox" class="contact__content__text__form__agreement__checkbox" id="checkbox">
                 <p class="contact__content__text__form__agreement__para">Podając swoje dane i klikając przycisk „wyślij”, wyrażam zgodę na przetwarzanie danych osobowych przez BDC DEVELOPMENT S.A. z siedzibą ul. Warszawska, nr 8, lok. U3, 05-100 Nowy Dwór Mazowiecki, Polska, w celu przekazania mi na mój adres e-mail bądź telefonicznie podstawowych informacji o BDC DEVELOPMENT S.A. w tym o świadczonych usługach. Oświadczam, iż zapoznałem się z dokumentem pt.</p>
                 <p class="contact__content__text__form__agreement__para"><a href="https://www.bdc-development.pl/wp-content/uploads/2019/08/20190729_Informacja-o-przetwarzaniu-danych.docx" class="contact__content__text__form__agreement__para__link">Klauzula informacyjna o przetwarzaniu danych osobowych BDC DEVELOPMENT S.A.</a></p>
                 <p class="contact__content__text__form__agreement__para">Podanie danych jest dobrowolne, ale niezbędne do przetworzenia Państwa zapytania. Informujemy, że Państwa zgoda może zostać cofnięta 
@@ -388,5 +378,18 @@
       </p>
     </div>
   </footer>
+
+    <!-- RANDOME -->
+  <div class="logo">
+    <img src="images/logo.svg" alt="logo" class="logo__image">
+  </div>
+  <div class="waves">
+    <img src="images/fale.png" alt="grafika fale">
+  </div>
+  <button class="upBtn" id="upBtn" role="button" tabindex="0">
+    <svg class="upBtn__svg"
+    viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M21.5,136.16667c0,7.91558 6.41775,14.33333 14.33333,14.33333h100.33333c7.91558,0 14.33333,-6.41775 14.33333,-14.33333v-100.33333c0,-7.91558 -6.41775,-14.33333 -14.33333,-14.33333h-100.33333c-7.91558,0 -14.33333,6.41775 -14.33333,14.33333z" fill="#00798f"></path><path d="M125.64242,96.69983l-11.05817,11.02592l-28.58425,-28.36208l-28.58067,28.36208l-11.05817,-11.02592l39.63883,-39.3665z" fill="#ffffff"></path></g></g>
+    </svg>
+  </button>
 </body>
 </html>
