@@ -1210,19 +1210,7 @@
           }
 
           &__checkbox:focus {
-            outline: none;
-          }
-
-          &__checkbox:focus::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            border: 2px solid var(--color-blue-effect);;
-            border-radius: 2px;
+            outline: 2px solid var(--color-blue-effect);
           }
         }
 
