@@ -481,11 +481,24 @@
       flex-wrap: wrap;
       justify-content: center;
 
+      @media screen and (max-width: 1500px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       &__button {
         @include button;
+
+        @media screen and (max-width: 1500px) {
+          margin-bottom: 2rem;
+        }
     
         &:not(:last-of-type) {
           @include button-not-last;
+
+          @media screen and (max-width: 1500px) {
+            margin-right: 0;
+          }
         }
     
         &__link {
@@ -610,16 +623,27 @@
       flex-direction: row;
       justify-content: center;
 
+      @media screen and (max-width: 1500px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+      }
+
       &__button {
         @include button;
         margin-top: 4rem;
 
-        @media screen and (max-width: 1460px) {
-          margin-top: 1rem;
+        @media screen and (max-width: 1500px) {
+          margin-top: 0;
+          margin-bottom: 2rem;
         }
     
         &:not(:last-of-type) {
           @include button-not-last;
+
+          @media screen and (max-width: 1500px) {
+            margin-right: 0;
+          }
         }
     
         &__link {
@@ -1081,11 +1105,25 @@
           padding: 1.5rem 0;
         }
 
+        @media screen and (max-width: 700px) {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 2rem;
+        }
+
         &__button {
           @include button;
 
+          @media screen and (max-width: 700px) {
+            margin-bottom: 2rem;
+          }
+
           &:first-child {
             @include button-not-last;
+
+            @media screen and (max-width: 700px) {
+              margin-right: 0;
+            }
           }
         }
       }
