@@ -85,6 +85,11 @@ button:hover {
   font-family: 'Alegreya', serif;
 }
 
+@mixin outline {
+  outline: 2px solid var(--color-blue-effect);
+  outline-offset: .5rem;
+}
+
 @mixin variantArrow {
   content: "›";
   position: absolute;

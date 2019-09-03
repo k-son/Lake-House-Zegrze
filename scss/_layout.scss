@@ -1178,8 +1178,7 @@
           padding-bottom: .5em;
 
           &:focus {
-            outline: 2px solid var(--color-blue-effect);
-            outline-offset: .5rem;
+            @include outline;
           }
         }
 
@@ -1198,8 +1197,7 @@
               }
 
               &:focus {
-                outline: 2px solid var(--color-blue-effect);
-                outline-offset: .5rem;
+                @include outline;
               }
             }
           }
@@ -1209,7 +1207,7 @@
           }
 
           &__checkbox:focus {
-            outline: 2px solid var(--color-blue-effect);
+            @include outline;
           }
         }
 
@@ -1257,6 +1255,10 @@
   &__linkLogo {
     margin-right: 4rem;
     transform: translateY(-1.2rem);
+
+    &:focus {
+      @include outline;
+    }
   }
 
   &__copyright {
