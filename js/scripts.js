@@ -72,27 +72,27 @@ for (let i = 0; i < variantButtons.length; i++) {
 ///// ANCHOR FUNCTIONS FOR BUTTONS
 
 document.getElementById('niesamowitaOkolica').addEventListener('click', () => {
-  window.location = '#' + 'lokalizacja';
+  window.location = '#lokalizacja';
 })
 
 document.getElementById('poznajInwestycje').addEventListener('click', () => {
-  window.location = '#' + 'inwestycja';
+  window.location = '#inwestycja';
 })
 
 document.getElementById('przyjrzyjSie').addEventListener('click', () => {
-  window.location = '#' + 'galeria';
+  window.location = '#galeria';
 })
 
 document.getElementById('przyjrzyjSie2').addEventListener('click', () => {
-  window.location = '#' + 'galeria';
+  window.location = '#galeria';
 })
 
 document.getElementById('wybierzMieszkanie').addEventListener('click', () => {
-  window.location = '#' + 'mieszkania';
+  window.location = '#mieszkania';
 })
 
 document.getElementById('rezerwujApartament').addEventListener('click', () => {
-  window.location = '#' + 'kontakt';
+  window.location = '#kontakt';
 })
 
 
@@ -101,8 +101,6 @@ document.getElementById('rezerwujApartament').addEventListener('click', () => {
 
 const upBtn = document.getElementById('upBtn');
 
-window.onscroll = function() {showUpBtn()};
-
 function showUpBtn() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     upBtn.style.display = "block";
@@ -110,8 +108,28 @@ function showUpBtn() {
     upBtn.style.display = "none";
   }
 }
+
+window.addEventListener('scroll', () => {
+  showUpBtn();
+})
+
 upBtn.addEventListener('click', () => {
   document.body.scrollTop = 0;  // For Sarafi
   document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
   closeModalMenu();
+})
+
+
+///// SLIDE IN CONTENT
+
+const anchorLocalizacja = document.getElementById('lokalizacja');
+
+function scrollToLokalizacja() {
+  if (document.body.scrollTop > anchorLocalizacja.offsetTop || document.documentElement.scrollTop > anchorLocalizacja.offsetTop) {
+    document.querySelector('.localization__content__icons').style.marginLeft = 0;
+  }
+}
+
+window.addEventListener('scroll', () => {
+  scrollToLokalizacja();
 })
