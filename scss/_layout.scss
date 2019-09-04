@@ -157,26 +157,41 @@
     &:focus {
       outline: none;
     }
+
+    &:active::after {
+      left: 100%;
+      width: 0;
+    }
   }
 }
 
 /// HAMBUREGER MENU
 //icon
 .nav__hamburger {
-  height: 5rem;
   padding: 0 .7rem;
   border-radius: 2px;
   transform: translateX(-1rem);
+  background-color: transparent;
+  border: none;
   display: none;
-  transition: all .2s;
+  transition: background-color .2s;
 
   @media screen and (max-width: 900px) {
     display: block;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-color: var(--color-blue-effect);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__icon {
+    height: 5rem;
   }
 }
 
@@ -224,15 +239,22 @@
     font-size: 3rem;
     text-transform: uppercase;
     color: var(--color-text-whitish);
+    background-color: transparent;
     padding: 2rem 4rem;
+    border: none;
     border-radius: 2px;
     display: inline-block;
     transform: translateX(3rem);
     transition: all .2s;
     
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
       background-color: var(--color-blue-effect);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -880,7 +902,6 @@
           font-family: 'Alegreya', serif;
           font-size: 2.4rem;
           line-height: 2rem;
-
         }
       }
     }
