@@ -174,7 +174,7 @@
   background-color: transparent;
   border: none;
   display: none;
-  transition: background-color .2s;
+  transition: all .2s;
 
   @media screen and (max-width: 900px) {
     display: block;
@@ -205,7 +205,7 @@
   color: var(--color-text-whitish);
   padding: 1rem 4rem 4rem 5rem;
   border-bottom-right-radius: 3px;
-  display: none;
+  margin-left: -50rem;
 
   @media screen and (min-width: 900px) {
     display: none;

@@ -7,11 +7,12 @@ const modalMenuLinks = document.querySelectorAll('.hamburger__link');
 
 hamburgerIcon.addEventListener('click', () => {
   hamburgerIcon.style.visibility = 'hidden';
-  modalMenu.style.display = 'block';
+  modalMenu.style.transition = 'all .2s';
+  modalMenu.style.marginLeft = 0;
 })
 
 function closeModalMenu() {
-  modalMenu.style.display = 'none';
+  modalMenu.style.marginLeft = '-50rem';
   hamburgerIcon.style.visibility = 'visible';
 }
 
