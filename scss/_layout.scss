@@ -141,7 +141,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -2px;
+      bottom: 0;
       left: 0;
       width: 0%;
       height: 3px;
@@ -1251,12 +1251,20 @@
           border-bottom: 1px solid #ddd;
           padding-bottom: .5em;
 
+          &:hover {
+            cursor: pointer;
+          }
+
           &:focus {
             @include outline;
           }
         }
 
         &__agreement {
+
+          &:hover {
+            cursor: pointer;
+          }
 
           &__para {
             font-family: 'Merriweather', serif;
@@ -1278,6 +1286,10 @@
 
           &__checkbox {
             position: relative;
+          }
+
+          &:hover {
+            cursor: pointer;
           }
 
           &__checkbox:focus {
