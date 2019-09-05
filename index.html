@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya|Merriweather:300|Poppins:300,400,700&display=swap" rel="stylesheet">
 
   <script src="js/scripts.js" async></script>
+  <script src="lightbox/js/lightbox-plus-jquery.js" defer></script>
 
+  <link rel="stylesheet" href="lightbox/css/lightbox.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -147,11 +149,11 @@
     <span class="anchor" id="galeria">&nbsp;</span>
     <div class="gallery">
       <div class="gallery__title title">przyjrzyj się bliżej projektowi</div>
-      <div class="gallery__images">
-        <img src="images/zegrze_01.jpg" alt="budynek mieszkalny" class="gallery__images__image">
-        <img src="images/zegrze_02.jpg" alt="budynek mieszkalny" class="gallery__images__image">
-        <img src="images/zegrze_03.jpg" alt="budynek mieszkalny" class="gallery__images__image">
-        <img src="images/zegrze_04.jpg" alt="budynek mieszkalny" class="gallery__images__image">
+      <div class="gallery__images" tabindex="0">
+        <a href="images/zegrze_01.jpg" class="gallery__images__link" data-lightbox="zegrze"><img src="images/zegrze_01.jpg" alt="budynek mieszkalny" class="gallery__images__image"></a>
+        <a href="images/zegrze_02.jpg" class="gallery__images__link" data-lightbox="zegrze"><img src="images/zegrze_02.jpg" alt="budynek mieszkalny" class="gallery__images__image"></a>
+        <a href="images/zegrze_03.jpg" class="gallery__images__link" data-lightbox="zegrze"><img src="images/zegrze_03.jpg" alt="budynek mieszkalny" class="gallery__images__image"></a>
+        <a href="images/zegrze_04.jpg" class="gallery__images__link" data-lightbox="zegrze"><img src="images/zegrze_04.jpg" alt="budynek mieszkalny" class="gallery__images__image"></a>
         <div class="emptySpace">&nbsp;</div>
       </div>
       <div class="gallery__arrows">

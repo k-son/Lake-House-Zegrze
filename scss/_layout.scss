@@ -710,6 +710,19 @@
     align-items: center;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    
+    &:focus {
+      @include outline;
+    }
+
+    &__link {
+      text-decoration: none;
+
+      &:focus {
+        outline: 5px solid #fff;
+        outline-offset: -5px;
+      }
+    }
 
     &__image {
       display: inline-block;
@@ -718,7 +731,7 @@
       width: auto;
 
       @media screen and (max-width: 900px) {
-        width: 85%;
+        width: 70vw;
         max-width: 749px;
         height: auto;
       }
@@ -741,6 +754,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 
     &:hover {
       cursor: not-allowed;
