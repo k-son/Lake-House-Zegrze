@@ -708,36 +708,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow-x: scroll;
     flex-wrap: nowrap;
-
-    @media screen and (max-width: 600px) {
-      //flex-direction: column;
-    }
+    overflow-x: scroll;
 
     &__image {
       display: inline-block;
       height: 50rem;
       max-height: 60vh;
       width: auto;
-      //width: 33.3333333%;
-      //align-self: center;
 
       @media screen and (max-width: 900px) {
         width: 85%;
         max-width: 749px;
         height: auto;
-      }
-
-      @media screen and (max-width: 600px) {
-        //width: 65%;
-        //margin-top: 2.5rem;
-
-      }
-
-      @media screen and (max-width: 450px) {
-        //width: 80%;
-        //margin-top: 2rem;
       }
     }
   }
