@@ -754,19 +754,24 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-
-    &:hover {
-      cursor: not-allowed;
-    }
 
     &__para {
       text-transform: uppercase;
       font-size: 1.2rem;
       letter-spacing: .5px;
     }
-  }
 
+  }
+  
+  &__scrollIcon {
+    height: 50px;
+    width: auto;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+  
   &__arrows--left,
   &__arrows__para {
     margin-right: 2rem;
@@ -1068,6 +1073,10 @@
         &__item {
           display: flex;
           flex-direction: column;
+        }
+
+        &__honey-row {
+          visibility: hidden;
         }
 
         &__label {
