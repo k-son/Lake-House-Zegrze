@@ -1,27 +1,38 @@
 <?php
 error_reporting(0);
 
-$mailToSend = 'j.jarczok@gmail.com';
+$mailToSend = 'kson.eu@gmail.com';
 
 if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-	$name       = $_POST['nadawca'];
+	$name       = $_POST['name'];
 	$email      = $_POST['email'];
-	$phone      = $_POST['telefon'];
-	$antiSpam   = $_POST['honey'];
+	$phone      = $_POST['phone'];
+	$subject		= $_POST['subject'];
+	$message    = $_POST['message'];
+	$antiSpam = $_POST['a_password'];
 	$regulation = $_POST['regulation'];
 	$errors     = Array();
 	$return     = Array();
 
 	if ( empty( $name ) ) {
-		array_push( $errors, 'nadawca' );
+		array_push( $errors, 'name' );
 	}
 	if ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 		array_push( $errors, 'email' );
 	}
 	if ( empty( $phone ) ) {
-		array_push( $errors, 'telefon' );
+		array_push( $errors, 'phone' );
+	}
+	if ( empty( $subject ) ) {
+		array_push( $errors, 'subject' );
+	}
+	if ( empty( $message ) ) {
+		array_push( $errors, 'message' );
 	}
 	if ( empty( $regulation ) ) {
+		array_push( $errors, 'regulation' );
+	}
+	if ( empty( !$antiSpam ) ) {
 		array_push( $errors, 'regulation' );
 	}
 
@@ -39,17 +50,21 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 			</head>
 			<style type='text/css'>
 				body {font-family:sans-serif; color:#222; padding:20px;}
-				div {margin-bottom:10px;}
+				div {margin-bottom:20px;}
 				.msg-title {margin-top:30px;}
 			</style>
 			<body>
 			<div>Imię: <strong>$name</strong></div>
 			<div>Email: <a href=\"mailto:$email\">$email</a></div>
-			<div>Telefon: $phone</div>
+			<div>Telefon: <strong>$phone</strong></div>
+			<div>Temat: <strong>$subject</strong></div>
+			<div class=\"msg-title\"> <strong>Wiadomość:</strong></div>
+			<div>$message</div>
 			</body>
 			</html>";
 
-		if ( mail( $mailToSend, 'Wiadomość z formularza Lake House Zegrze - ' . date( "d-m-Y" ), $message, $headers ) ) {
+
+		 if ( mail( $mailToSend, 'Wiadomość z formularza X - ' . date( "d-m-Y" ), $message, $headers ) ) {
 			$return['status'] = 'ok';
 		} else {
 			$return['status'] = 'error';

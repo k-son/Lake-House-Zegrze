@@ -235,26 +235,27 @@
         <div class="contact__content__map"></div>
         <div class="contact__content__text">
           <p class="contact__content__text__caption">Zarezerwuj apartament już teraz</p>
-          <form class="contact__content__text__form" method="POST" novalidate action="send-script.php">
-            <div class="contact__content__text__form__item">
-              <label for="name" class="contact__content__text__form__label">imię i nazwisko</label>
-              <input type="text" id="name" value="Jan Kowalski" class="contact__content__text__form__input" name="nadawca" required data-error="Napisz jak się nazywasz" pattern="[a-zA-ZąĄććĆęęłŁńŃóÓśŚżŻŹŹźŹ ]+">
+          <form class="form" id="contactForm" method="post" novalidate action="send-script.php">
+            <div class="form-row">
+              <label for="field-name">Imię i Nazwisko</label>
+              <input type="text" name="name" required id="field-name" data-error="Napisz jak się nazywasz" pattern="[a-zA-ZąĄććĆęęłŁńŃóÓśŚżŻŹŹźŹ ]+" value="Jan Kowalski">
             </div>
-            <div class="contact__content__text__form__item">
-              <label for="email" class="contact__content__text__form__label">adres email</label>
-              <input type="text" id="email" value="jan.kowalski@mail.com" class="contact__content__text__form__input" name="email" required data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+            <div class="form-row">
+              <label for="field-email">Adres E-mail</label>
+              <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@mail.com">
             </div>
-            <div class="contact__content__text__form__item">
-              <label for="phone" class="contact__content__text__form__label">nr telefonu</label>
-              <input type="text" id="phone" value="+ 48 123 456 789" class="contact__content__text__form__input" name="telefon" required  data-error="Wpisz poprawny numer telefonu" pattern="^[0-9+\(\)#\.\s\/ext-]+$">
+            <div class="form-row">
+              <label for="field-phone">Nr telefonu</label>
+              <input type="tel" name="phone" required id="field-phone" data-error="Wpisz poprawny numer telefonu" pattern="^[0-9+\(\)#\.\s\/ext-]+$" value="+48&nbsp;123&nbsp;456&nbsp;789 ">
             </div>
-            <span class="contact__content__text__form__honey-row">
-                <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
-                <input type="text" name="honey" id="honey">
+            <span class="form-row honey-row" style="display: none;">
+              <label for="a_password">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+              <input id="a_password" type="text" name="a_password" tabindex="-1" autocomplete="off">
             </span>
-            <div class="contact__content__text__form__item">
-              <label for="checkbox" class="contact__content__text__form__agreement">
-                <input type="checkbox" class="contact__content__text__form__agreement__checkbox" id="checkbox" required data-error="Musisz zaakceptować politykę prywatności" name="regulation">
+            <div class="form-row">
+              <label class="checkbox-cnt">
+                <input class="checkbox-cnt" type="checkbox" required data-error="Musisz zaakceptować politykę prywatności" name="regulation" tabindex="0">
+                <i class="state" aria-hidden="true"></i>
                 <p class="contact__content__text__form__agreement__para">Podając swoje dane i klikając przycisk „wyślij”, wyrażam zgodę na przetwarzanie danych osobowych przez BDC DEVELOPMENT S.A. z siedzibą ul. Warszawska, nr 8, lok. U3, 05-100 Nowy Dwór Mazowiecki, Polska, w celu przekazania mi na mój adres e-mail bądź telefonicznie podstawowych informacji o BDC DEVELOPMENT S.A. w tym o świadczonych usługach. Oświadczam, iż zapoznałem się z dokumentem pt.</p>
                 <p class="contact__content__text__form__agreement__para"><a href="https://www.bdc-development.pl/wp-content/uploads/2019/08/20190729_Informacja-o-przetwarzaniu-danych.docx" class="contact__content__text__form__agreement__para__link">Klauzula informacyjna o przetwarzaniu danych osobowych BDC DEVELOPMENT S.A.</a></p>
                 <p class="contact__content__text__form__agreement__para">Podanie danych jest dobrowolne, ale niezbędne do przetworzenia Państwa zapytania. Informujemy, że Państwa zgoda może zostać cofnięta 

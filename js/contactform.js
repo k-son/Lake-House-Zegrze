@@ -98,24 +98,28 @@
                         return '[name="'+el+'"]'
                     });
                     const selector = ret.errors.join(',');
-                    checkFieldsErrors(form.querySelectorAll(sekector));
+                    checkFieldsErrors(form.querySelectorAll(selector));
 
                 } else {
                     if (ret.status === 'ok') {
                         //wyświetlamy komunikat powodzenia, cieszymy sie
                         const div = document.createElement('div');
                         div.classList.add('form-send-success');
-
-                        div.innerHTML = '<strong>Wiadomość została wysłana.</strong><br><span>Dziękujemy za kontakt.<br>Postaramy się odpowiedzieć jak najszybciej.</span>';
-                        form.parentElement.insertBefore(div, form);
-                        form.remove();
+                        div.innerHTML = 'Wiadomość została wysłana.';
+                        const submitBtn = document.querySelector('.submit-btn');
+                        submitBtn.insertAdjacentElement('beforebegin', div);
+                        
+                        //form.parentElement.insertBefore(div, form);
+                        //form.remove();
                     }
 
                     if (ret.status === 'error') {
                         //komunikat błędu, niepowodzenia
                         const div = document.createElement('div');
                         div.classList.add('send-error');
-                        div.innerText = 'Wysłanie wiadomości się nie powiodło';
+                        div.innerText = '<p>Wysłanie wiadomości się nie powiodło.</p>';
+                        const submitBtn = document.querySelector('.submit-btn');
+                        submitBtn.insertAdjacentElement('beforebegin', div);
                     }
                 }
             }).catch(_ => {
