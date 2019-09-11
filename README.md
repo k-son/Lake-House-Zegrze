@@ -1,5 +1,6 @@
 # Lake-House-Zegrze
 Landing page for a developer's housing estate.
+Coded by me from the supplied design.
 
 # Technologies
 * HTML5, BEM, Emmet
