@@ -238,15 +238,15 @@
           <form class="form" id="contactForm" method="post" novalidate action="send-script.php">
             <div class="form-row">
               <label for="field-name">Imię i Nazwisko</label>
-              <input type="text" name="name" required id="field-name" data-error="Napisz jak się nazywasz" pattern="[a-zA-ZąĄććĆęęłŁńŃóÓśŚżŻŹŹźŹ ]+" value="Jan Kowalski">
+              <input type="text" name="name" required id="field-name" data-error="Napisz jak się nazywasz" pattern="[a-zA-ZąĄććĆęęłŁńŃóÓśŚżŻŹŹźŹ ]+" placeholder="Jan Kowalski">
             </div>
             <div class="form-row">
               <label for="field-email">Adres E-mail</label>
-              <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@mail.com">
+              <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="jan.kowalski@mail.com">
             </div>
             <div class="form-row">
               <label for="field-phone">Nr telefonu</label>
-              <input type="tel" name="phone" required id="field-phone" data-error="Wpisz poprawny numer telefonu" pattern="^[0-9+\(\)#\.\s\/ext-]+$" value="+48&nbsp;123&nbsp;456&nbsp;789 ">
+              <input type="tel" name="phone" required id="field-phone" data-error="Wpisz poprawny numer telefonu" pattern="^[0-9+\(\)#\.\s\/ext-]+$" placeholder="+48&nbsp;123&nbsp;456&nbsp;789 ">
             </div>
             <span class="form-row honey-row" style="display: none;">
               <label for="a_password">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
