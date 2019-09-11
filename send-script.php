@@ -7,8 +7,6 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$name       = $_POST['name'];
 	$email      = $_POST['email'];
 	$phone      = $_POST['phone'];
-	$subject		= $_POST['subject'];
-	$message    = $_POST['message'];
 	$antiSpam = $_POST['a_password'];
 	$regulation = $_POST['regulation'];
 	$errors     = Array();
@@ -23,12 +21,6 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	if ( empty( $phone ) ) {
 		array_push( $errors, 'phone' );
 	}
-	if ( empty( $subject ) ) {
-		array_push( $errors, 'subject' );
-	}
-	if ( empty( $message ) ) {
-		array_push( $errors, 'message' );
-	}
 	if ( empty( $regulation ) ) {
 		array_push( $errors, 'regulation' );
 	}
@@ -41,7 +33,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	} else {
 		$headers = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-		$headers .= 'From: ' . $email . "\r\n";
+		$headers .= 'From: ' . $name . "\r\n";
 		$headers .= 'Reply-to: ' . $email;
 		$message = "
 			<html>
@@ -57,14 +49,11 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 			<div>Imię: <strong>$name</strong></div>
 			<div>Email: <a href=\"mailto:$email\">$email</a></div>
 			<div>Telefon: <strong>$phone</strong></div>
-			<div>Temat: <strong>$subject</strong></div>
-			<div class=\"msg-title\"> <strong>Wiadomość:</strong></div>
-			<div>$message</div>
 			</body>
 			</html>";
 
 
-		 if ( mail( $mailToSend, 'Wiadomość z formularza X - ' . date( "d-m-Y" ), $message, $headers ) ) {
+		 if ( mail( $mailToSend, 'Wiadomość z formularza Lake House Zegrze - ' . date( "d-m-Y" ), $message, $headers ) ) {
 			$return['status'] = 'ok';
 		} else {
 			$return['status'] = 'error';
