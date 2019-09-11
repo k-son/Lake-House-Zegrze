@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 .form {
     margin: 5rem auto 4rem auto;
 }
@@ -8,16 +9,23 @@
 .form label {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: .5px;
+    color: #444;
+    margin-bottom: .5rem;
 }
 
 .form .form-row {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
+
 .form .form-row:last-child {
     margin-bottom: 0;
 }
+
 .form input[type=text],
 .form input[type=email],
 .form input[type=tel],
@@ -25,6 +33,7 @@
 .form .checkbox-cnt .state {
     //box-shadow:inset 0 1px 5px rgba(0,0,0,0.07);
 }
+
 .form input[type=text],
 .form input[type=email],
 .form input[type=tel],
@@ -36,12 +45,14 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: .5em;
 }
+
 .form input[type=text]:hover,
 .form input[type=email]:hover,
 .form input[type=tel]:hover,
 .form textarea:hover {
     cursor: pointer;
 }
+
 .form input[type=text]:focus,
 .form input[type=email]:focus,
 .form input[type=tel]:focus,
@@ -49,17 +60,11 @@
     outline: 2px solid #00798f;
     outline-offset: .5rem;
 }
+
 .form textarea {
-    height:10rem;
+    height: 10rem;
 }
-.form label {
-    text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: .5px;
-    font-weight: 400;
-    color: #666;
-    margin-bottom: .5rem;
-}
+
 .form .submit-btn {
     width: 16rem;
     height: 6.1rem;
@@ -78,23 +83,26 @@
     border: 2px solid var(--color-bg-dark);
     transition: all .2s;
 }
+
 .form .submit-btn:hover,
 .form .submit-btn:focus {
     background-color: var(--color-button-transition);
     transform: scale(1.05);
     outline: none;
 }
+
 .form .submit-btn:active {
     border: 2px solid #fff;
     transform: translateY(1px);
 }
+
 .form .checkbox-cnt {
     //padding-left:3rem;
     position: relative;
     font-weight: normal;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     line-height: 2rem;
-    color:#444;
+    color: #444;
     cursor: pointer;
 }
 
@@ -104,36 +112,36 @@
 }
 
 .form .checkbox-cnt .state {
-    width:2rem;
+    width: 2rem;
     height: 2rem;
     display: block;
     position: absolute;
-    left:0;
-    top:0;
-    border:1px solid #aaa;
+    left: 0;
+    top: 0;
+    border: 1px solid #aaa;
     background-color: transparent;
-    border-radius:0.2rem;
+    border-radius: 0.2rem;
 }
 
 .form .checkbox-cnt .state:before {
-    width:1rem;
+    width: 1rem;
     height: 1rem;
-    border-radius:0.2rem;
+    border-radius: 0.2rem;
     background: #00798f;
     display: block;
     position: absolute;
-    left:50%;
-    top:50%;
-    content:'';
-    transform:translate(-50%, -50%) scale(1);
-    opacity:0;
+    left: 50%;
+    top: 50%;
+    content: '';
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
 }
 
 .form .checkbox-cnt .state:after {
     display: block;
     content: "";
-    width:2rem;
-    height:2rem;
+    width: 2rem;
+    height: 2rem;
     background-color: transparent;
     position: absolute;
     left: -1px;
@@ -143,52 +151,67 @@
     opacity: 0;
 }
 
-.form .checkbox-cnt input:checked ~ .state:before {
+.form .checkbox-cnt input:checked~.state:before {
     animation: checkboxShowAnim 0.5s 1;
     opacity: 1;
 }
 
-.form .checkbox-cnt input:focus ~ .state:after {
+.form .checkbox-cnt input:focus~.state:after {
     opacity: 1;
 }
-.form .checkbox-cnt input:checked ~ .state:after {
+
+.form .checkbox-cnt input:checked~.state:after {
     opacity: 0;
 }
 
 .form .checkbox-cnt input {
-    position:absolute;
-    top:0; left:0;
-    width:2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
     height: 2rem;
     z-index: 2;
-    cursor:pointer;
-    padding:0;
-    margin:0;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
     opacity: 0;
 }
+
 .form input[type=text].error,
 .form input[type=email].error,
 .form input[type=tel].error,
 .form textarea.error,
-.form .checkbox-cnt input.error ~ .state {
-    border-color:#ec0829;
+.form .checkbox-cnt input.error~.state {
+    border-color: #ec0829;
 }
+
 .field-error {
-    color:#ec0829;
-    padding:0.5rem 0;
-    font-size:1.1rem;
+    color: #ec0829;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
 }
+
 @keyframes checkboxShowAnim {
-    0%  { border-radius:50%; transform:translate(-50%, -50%) scale(0.2); }
-    50% { transform:translate(-50%, -50%) scale(1.2); }
-    100% { transform:translate(-50%, -50%) scale(1); }
+    0% {
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 .element-is-busy {
     position: relative;
     pointer-events: none;
-    opacity:0.5;
+    opacity: 0.5;
 }
+
 .element-is-busy::after {
     position: absolute;
     left: 50%;
@@ -197,59 +220,64 @@
     height: 20px;
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-right-color: rgba(0,0,0,0.7);
+    border-right-color: rgba(0, 0, 0, 0.7);
     transform: translate(-50%, -50%) rotate(0deg);
-    content:'';
+    content: '';
     animation: rotateSingleLoading 0.3s infinite linear;
     z-index: 100;
 }
+
 @keyframes rotateSingleLoading {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
 .form .send-error {
-    display:inline-block;
+    display: inline-block;
     font-family: 'Alegreya', serif;
-    font-size:0.9rem;
-    padding:1rem 1.5rem;
-    color:#ec0829;
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem;
+    color: #ec0829;
 }
+
 .form-send-success {
     font-family: 'Alegreya', serif;
-    font-size:2rem;
-    font-weight:bold;
+    font-size: 2rem;
+    font-weight: bold;
     //border:1px solid #eee;
     color: #00798f;
     //background-color: white;
-    margin:2rem;
+    margin: 2rem;
     //max-width:40rem;
 }
+
 .form-send-success strong {
-    display:block;
-    margin-bottom:0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
 }
+
 .form-send-success span {
-    font-size:1.4rem;
-    color:#333;
-    font-weight:normal;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: normal;
     display: block;
 }
+
 @media screen and (max-width:500px) {
-    .form .submit-btn {
-    }
+    .form .submit-btn {}
+
     .form .send-error {
-        text-align:center;
+        text-align: center;
         display: block;
     }
 }
 
-.form-row.honey-row {
-
-}
+.form-row.honey-row {}
 
 .form label .contact__content__text__form__agreement__para {
     font-family: 'Merriweather', serif;
