@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .form {
@@ -18,8 +19,13 @@
 
 .form .form-row {
     margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .form .form-row:last-child {
@@ -76,24 +82,33 @@
     text-transform: uppercase;
     font-size: 1.3rem;
     letter-spacing: -0.039rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-decoration: none;
     border: 2px solid var(--color-bg-dark);
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 
 .form .submit-btn:hover,
 .form .submit-btn:focus {
     background-color: var(--color-button-transition);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     outline: none;
 }
 
 .form .submit-btn:active {
     border: 2px solid #fff;
-    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
 }
 
 .form .checkbox-cnt {
@@ -133,7 +148,8 @@
     left: 50%;
     top: 50%;
     content: '';
-    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     opacity: 0;
 }
 
@@ -152,7 +168,8 @@
 }
 
 .form .checkbox-cnt input:checked~.state:before {
-    animation: checkboxShowAnim 0.5s 1;
+    -webkit-animation: checkboxShowAnim 0.5s 1;
+            animation: checkboxShowAnim 0.5s 1;
     opacity: 1;
 }
 
@@ -191,18 +208,39 @@
     font-size: 1.1rem;
 }
 
-@keyframes checkboxShowAnim {
+@-webkit-keyframes checkboxShowAnim {
     0% {
         border-radius: 50%;
-        transform: translate(-50%, -50%) scale(0.2);
+        -webkit-transform: translate(-50%, -50%) scale(0.2);
+                transform: translate(-50%, -50%) scale(0.2);
     }
 
     50% {
-        transform: translate(-50%, -50%) scale(1.2);
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+                transform: translate(-50%, -50%) scale(1.2);
     }
 
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes checkboxShowAnim {
+    0% {
+        border-radius: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(0.2);
+                transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+                transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
 }
 
@@ -221,19 +259,35 @@
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-right-color: rgba(0, 0, 0, 0.7);
-    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
     content: '';
-    animation: rotateSingleLoading 0.3s infinite linear;
+    -webkit-animation: rotateSingleLoading 0.3s infinite linear;
+            animation: rotateSingleLoading 0.3s infinite linear;
     z-index: 100;
+}
+
+@-webkit-keyframes rotateSingleLoading {
+    from {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 @keyframes rotateSingleLoading {
     from {
-        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
     }
 
     to {
-        transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
