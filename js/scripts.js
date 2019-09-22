@@ -1,3 +1,5 @@
+"use strict";
+
 ///// HAMBURGER MENU
 
 const hamburgerIcon = document.getElementById('hamburgerIcon');
